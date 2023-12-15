@@ -6,10 +6,6 @@ Este documento detalla el desarrollo de una aplicación que permite configurar a
 
 El objetivo de esta aplicación es proporcionar a los usuarios una interfaz para configurar acciones sostenibles, enfocándose en elementos clave que promuevan prácticas responsables en diferentes áreas.
 
-### Desafío
-
-El desafío busca evaluar las habilidades tanto en el desarrollo Frontend como en el Backend, pero se enfatiza la libertad para enfocarse en el área de mayor comodidad y especialización del desarrollador.
-
 ## Requerimientos
 
 ### Campos Obligatorios
