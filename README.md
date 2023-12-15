@@ -55,11 +55,11 @@ Se utilizó Material UI para el diseño de los componentes, aprovechando su exte
 
 Para visualizar la aplicación desplegada, puedes acceder al siguiente enlace:
 
-[Link de Deploy](https://a-sepulveda-r.github.io/pt-liftun/)
+[Link de Deploy](https://a-sepulveda-r.github.io/pt_liftun/)
 
 Si prefieres ejecutar la aplicación localmente, sigue estos pasos:
 
-1. Clona el repositorio desde [GitHub](https://github.com/a-sepulveda-r/pt-liftun).
+1. Clona el repositorio desde [GitHub](https://github.com/a-sepulveda-r/pt_liftun).
 
 2. Instala las dependencias ejecutando `npm install`.
 

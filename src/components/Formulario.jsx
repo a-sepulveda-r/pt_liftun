@@ -8,16 +8,12 @@ import {
   MenuItem,
   FormControl,
   Box,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
   InputLabel,
   Typography,
   Modal,
 } from '@mui/material';
-import { tableHeaders } from '../data/tableHeaders';
+import { defaultDataBase } from '../data/defaultData';
+import { TablaComponent } from './TablaComponent';
 
 const Formulario = () => {
   const [formData, setFormData] = useState({
@@ -53,6 +49,11 @@ const Formulario = () => {
     const storedData = JSON.parse(localStorage.getItem('formData'));
     if (storedData) {
       setFormEntries(storedData);
+    } else {
+      const defaultData = defaultDataBase;
+
+      localStorage.setItem('formData', JSON.stringify(defaultData));
+      setFormEntries(defaultData);
     }
   }, []);
 
@@ -239,31 +240,7 @@ const Formulario = () => {
       </Modal>
 
       <Box sx={{ margin: 'auto', overflowX: 'auto' }}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              {tableHeaders.map((header, index) => (
-                <TableCell key={index}>{header} </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {formEntries.map((entry, index) => (
-              <TableRow key={index}>
-                <TableCell>{entry.nombreAccion}</TableCell>
-                <TableCell>{entry.fechaInicio}</TableCell>
-                <TableCell>{entry.fechaTermino}</TableCell>
-                <TableCell>{entry.tieneResponsable ? 'Sí' : 'No'}</TableCell>
-                <TableCell>{entry.tieneObjetivo ? 'Sí' : 'No'}</TableCell>
-                <TableCell>{entry.tipoAccion}</TableCell>
-                <TableCell>
-                  {entry.requiereCalculoHuella ? 'Sí' : 'No'}
-                </TableCell>
-                <TableCell>{entry.esObligacionLegal ? 'Sí' : 'No'}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+        <TablaComponent formEntries={formEntries} />
       </Box>
     </div>
   );
